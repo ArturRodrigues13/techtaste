@@ -1,13 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:imersao_mobile_alura/_util/app_theme.dart';
+import 'package:imersao_mobile_alura/data/restaurants_data.dart';
 import 'package:imersao_mobile_alura/ui/splash/splash_screen.dart';
 import 'package:imersao_mobile_alura/_util/desktop_init.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Garante a inicialização do Flutter
   await initDesktop();
 
-  runApp(const MyApp());
+  RestaurantsData restaurantsData = RestaurantsData();
+  await restaurantsData.getRestaurants();
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) {
+            return restaurantsData;
+          },
+        ),
+      ],
+	  child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
