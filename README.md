@@ -1,16 +1,16 @@
-# imersao_mobile_alura
+# 🍔 TechTaste - App de Delivery
 
-A new Flutter project.
+Projeto desenvolvido durante a **Imersão Mobile Flutter da Alura**, realizada no período de 14/04/2025 até 16/04/2025. O **TechTaste** é um aplicativo simples de delivery que simula a navegação, exibição de itens e realização de pedidos.
 
-## Getting Started
+## 🚀 Tecnologias e ferramentas
 
-This project is a starting point for a Flutter application.
+- Flutter
+- Dart
+- JSON (simulação de banco de dados local)
 
-A few resources to get you started if this is your first Flutter project:
+## 🧠 Habilidades desenvolvidas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 🔁 Reforço de **conceitos básicos do Flutter** (widgets, navegação, estrutura de projeto)
+- 📄 **Transformação de dados locais em interface funcional**, utilizando um arquivo JSON como simulação de base de dados
+- 🔧 **Gerenciamento de estado com Provider**, incluindo escuta de mudanças e atualização dinâmica da interface
+- 🧾 **Lógica completa de pedidos**, desde a seleção de itens até o resumo do pedido

@@ -36,7 +36,6 @@ windows/
 .metadata
 pubspec.lock
 analysis_options.yaml
-pubspec.yaml
 
 # Flutter/Dart/Pub related
 **/doc/api/

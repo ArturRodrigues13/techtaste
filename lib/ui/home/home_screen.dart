@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imersao_mobile_alura/_util/widgets/app_bar.dart';
 import 'package:imersao_mobile_alura/data/categories_data.dart';
 import 'package:imersao_mobile_alura/data/restaurants_data.dart';
 import 'package:imersao_mobile_alura/model/restaurant.dart';
@@ -14,11 +15,7 @@ class HomeScreen extends StatelessWidget {
     RestaurantsData restaurantsData = Provider.of<RestaurantsData>(context);
     return Scaffold(
       drawer: Drawer(),
-      appBar: AppBar(
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
-        ],
-      ),
+      appBar: getAppBar(context: context),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: SingleChildScrollView(

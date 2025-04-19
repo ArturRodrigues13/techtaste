@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imersao_mobile_alura/_util/app_theme.dart';
+import 'package:imersao_mobile_alura/_util/bag_provider.dart';
 import 'package:imersao_mobile_alura/data/restaurants_data.dart';
 import 'package:imersao_mobile_alura/ui/splash/splash_screen.dart';
 import 'package:imersao_mobile_alura/_util/desktop_init.dart';
@@ -15,13 +16,11 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) {
-            return restaurantsData;
-          },
-        ),
+        ChangeNotifierProvider(create: (context) => restaurantsData),
+
+        ChangeNotifierProvider(create: (context) => BagProvider()),
       ],
-	  child: MyApp(),
+      child: MyApp(),
     ),
   );
 }
@@ -32,6 +31,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: AppTheme.appTheme, home: SplashScreen());
+    return MaterialApp(
+      theme: AppTheme.appTheme,
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
+    );
   }
 }
